@@ -30,7 +30,7 @@ private:
 	std::string m_sname;
 };
 
-void main()
+int main()
 {
 	std::string i_fname, i_sname;
 
