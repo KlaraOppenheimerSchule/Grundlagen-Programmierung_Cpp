@@ -3,7 +3,7 @@
 class UserSpace
 {
 public:
-    UserSpace(std::string userInput, std::string passInput, int idInput)
+    UserSpace(std::string userInput, std::string passInput)
     {
         this->username = userInput;
         this->password = passInput;
@@ -32,7 +32,6 @@ protected:
 private:
     std::string username;
     std::string password;
-    int id;
 };
 
 

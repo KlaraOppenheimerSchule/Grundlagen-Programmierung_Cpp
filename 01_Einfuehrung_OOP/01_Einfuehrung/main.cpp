@@ -16,7 +16,7 @@ int main()
 
     newLine();
 
-    UserSpace UserInput(username, password, id);
+    UserSpace UserInput(username, password);
 
     std::cout << "outUsername: " << UserInput.getUsername() << std::endl;
     std::cout << "outPassword: " << UserInput.getPassword() << std::endl;
