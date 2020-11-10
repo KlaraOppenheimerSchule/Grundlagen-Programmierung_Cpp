@@ -58,7 +58,6 @@ class tankHelfer {
         {
             return this->fuelType;
         }
-    protected:
     private:
         const double superPrice = 0.42;
         const double superPlusPrice = 0.59;
