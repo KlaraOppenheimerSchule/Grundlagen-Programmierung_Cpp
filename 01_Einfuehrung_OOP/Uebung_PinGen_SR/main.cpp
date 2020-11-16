@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../colours_n_more.hpp"
+#include "colours_n_more.hpp"
 #include "class.hpp"
 
 int main()
