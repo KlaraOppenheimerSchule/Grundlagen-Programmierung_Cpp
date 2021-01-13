@@ -7,14 +7,13 @@
 
 #include <iostream>
 #include <string>
-#include <algorithm>
 
 void main()
 {
-    // Mögliche andere aber viel längere version: https://gist.github.com/DawiDeX-Zero/c39981e4659f71e59324a0214b1e44d9
+    // MÃ¶gliche andere aber viel lÃ¤ngere version: https://gist.github.com/DawiDeX-Zero/c39981e4659f71e59324a0214b1e44d9
 
     std::string zeichenkette;
-    std::string alphabet_de = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ß.,:;?!-_'\"=()@";
+    std::string alphabet_de = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ÃŸ.,:;?!-_'\"=()@";
     std::string alphabet_morse[] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", "...--..", ".-.-.-", "--..--", "---...", "-.-.-.", "..--..", "-.-.--", "-....-", "..--.-", ".----.", ".-..-.", "-...-", "-.--.", "-.--.-", ".--.-." };
 
     std::cout << "Bitte geben Sie eine Zeichenkette ein.\n";
@@ -28,7 +27,7 @@ void main()
 
         if (zeichenkette[i] == ' ')
         {
-            converted_morse.append("/"); // Leerzeilen werden als / (Backslash) übersetzt.
+            converted_morse.append("/"); // Leerzeilen werden als / (Backslash) Ã¼bersetzt.
             continue;
         }
 
@@ -38,7 +37,7 @@ void main()
             converted_morse.append(alphabet_morse[found]);
             if (i != zeichenkette.length())
             {
-                converted_morse.append(" "); // An das Ende jedes Morse Zeichens wird ein Space eingefügt.
+                converted_morse.append(" "); // An das Ende jedes Morse Zeichens wird ein Space eingefÃ¼gt.
             }
         }
     }
