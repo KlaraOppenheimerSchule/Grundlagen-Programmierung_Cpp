@@ -150,16 +150,25 @@ void tryReservSeat()
     std::cout << "Waehlen sie einen Platz aus in diesem Format \"XX YY\"" << std::endl;
     std::cout << "> ";
     std::cin >> XX >> YY;
+
+    if(XX > kinoSaele[saal-1].getRows() - 1 || YY > kinoSaele[saal-1].getCols() - 1 || XX < 0 || YY < 0)
+    {
+        std::cout << "[ERROR]" << " Out of bounds" << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+    } else {
+        success = kinoSaele[saal-1].reservSeat(XX, YY);
+
+        if(!success)
+        {
+            std::cout << "[ERROR] Saal ist schon reserviert!" << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(3));
+        }
+    }
+
     //std::cout << "XX: " << XX << std::endl;
     //std::cout << "YY: " << YY << std::endl;
 
-    success = kinoSaele[saal-1].reservSeat(XX, YY);
 
-    if(!success)
-    {
-        std::cout << "[ERROR] Saal ist schon reserviert!" << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(3));
-    }
 
 
 }
